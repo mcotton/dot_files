@@ -1,8 +1,16 @@
 export PS1="\w> "
 
+alias ui01='ssh mcotton@192.168.2.158'
+alias ui02='ssh mcotton@192.168.2.159'
+
+alias hardware='/Users/cotton/dev/CS/tecs-software-suite-2.5/HardwareSimulator.sh'
+
 alias tree='ls -R'
 
 alias wifi='ifconfig en0'
+
+alias copy='pbcopy'
+alias paste='pbpaste'
 
 alias mate='open -a TextMate'
 alias coda='open -a /Applications/Developer/Coda.app/'
@@ -56,7 +64,11 @@ alias m1='alias g1="cd `pwd`"'
 alias m2='alias g2="cd `pwd`"'
 alias m3='alias g3="cd `pwd`"'
 
-alias status='git status'
+#]alias whack="ssh mcotton@192.168.2.158 'cd /home/mcotton/dev/mcotton-een; git pull origin merge'"
+alias whack='ssh mcotton@192.168.2.158 '\''cd /home/mcotton/dev/mcotton-een; git pull origin mcotton-refactor'\'''
+
+alias gitpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+alias status='git status --short'
 alias commit='git commit'
 alias add='git add .'
 #alias log='git log --color | less -R'
@@ -65,20 +77,31 @@ alias log="git log --graph --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset
 alias gittree='git log --graph --simplify-by-decoration --pretty=format:'%d' --all'
 alias lola="git log --graph --decorate --pretty=oneline --abbrev-commit
 --all"
+alias bump="git checkout master; git merge mcotton; git pull --all; git push; git checkout mcotton"
+alias patches="git log --abbrev-commit -p"
+alias gti='git'
 
 alias new='ls -ltr | tail'
 
-function parse_git_branch () {
-       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
+#function parse_git_branch () {
+#       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+#}
 
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
-PS1="$GREEN\w$YELLOW\$(parse_git_branch)$NO_COLOUR\$ "
+#PS1="$GREEN\w$YELLOW\$(parse_git_branch)$NO_COLOUR\$ "
 
+function parse_git_dirty {
+ [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+}
+#export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
+PS1="$GREEN\w$YELLOW \$(parse_git_branch)$NO_COLOUR\$ "
 
 # {{{
 # Node Completion - Auto-generated, do not touch.
@@ -88,3 +111,6 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
