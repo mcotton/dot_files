@@ -119,6 +119,7 @@ alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-ee
 alias pull_stage="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/stage/mcotton-een/templates/; git pull; git checkout -f;  git reset --hard' "
 alias sublime='open -a /Applications/Developer/Sublime\ Text\ 2.app/'
 
-< PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
