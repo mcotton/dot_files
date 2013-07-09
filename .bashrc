@@ -112,5 +112,13 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
+alias sandbox='ssh mcotton@192.168.2.169'
+alias pull_login="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/login/mcotton-een/templates/; git pull; grunt ' "
+alias pull_next="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/next/mcotton-een/templates/; git pull; grunt ' "
+alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-een/templates/; git pull; grunt ' "
+alias pull_stage="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/stage/mcotton-een/templates/; git pull; git checkout -f;  git reset --hard' "
+alias sublime='open -a /Applications/Developer/Sublime\ Text\ 2.app/'
+
+< PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
