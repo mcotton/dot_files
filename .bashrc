@@ -119,6 +119,8 @@ alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-ee
 alias pull_stage="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/stage/mcotton-een/templates/; git pull; git checkout -f;  git reset --hard' "
 alias sublime='open -a /Applications/Developer/Sublime\ Text\ 2.app/'
 
+alias redis-remote='redis-cli -h nodejitsudb1467487134.redis.irstack.com -p 6379 -a nodejitsudb1467487134.redis.irstack.com:f327cfe980c971946e80b8e975fbebb4'
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
