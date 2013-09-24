@@ -80,6 +80,8 @@ alias lola="git log --graph --decorate --pretty=oneline --abbrev-commit
 alias bump="git checkout master; git merge mcotton; git pull --all; git push; git checkout mcotton"
 alias patches="git log --abbrev-commit -p"
 alias gti='git'
+alias checkout='git checkout'
+
 
 alias new='ls -ltr | tail'
 
