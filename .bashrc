@@ -2,6 +2,7 @@ export PS1="\w> "
 
 alias ui01='ssh mcotton@192.168.2.158'
 alias ui02='ssh mcotton@192.168.2.159'
+alias fuze='sshfs mcotton@192.168.2.158:/home/mcotton ~/een'
 
 alias hardware='/Users/cotton/dev/CS/tecs-software-suite-2.5/HardwareSimulator.sh'
 
