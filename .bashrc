@@ -84,6 +84,7 @@ alias patches="git log --abbrev-commit -p"
 alias gti='git'
 alias checkout='git checkout'
 
+alias record='i=1;while [ 1 ];do screencapture -t jpg -x /Volumes/Mr.Tiny/$i.jpg; let i++;sleep 6; done'
 
 alias new='ls -ltr | tail'
 
@@ -121,7 +122,7 @@ alias pull_login="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/login/mcotton-
 alias pull_next="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/next/mcotton-een/templates/; git pull; grunt ' "
 alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-een/templates/; git pull; grunt ' "
 alias pull_stage="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/stage/mcotton-een/templates/; git pull; git checkout -f;  git reset --hard' "
-alias sublime='open -a /Applications/Developer/Sublime\ Text\ 2.app/'
+alias sublime='open -a /Applications/Developer/Sublime\ Text.app/'
 
 alias redis-remote='redis-cli -h nodejitsudb1467487134.redis.irstack.com -p 6379 -a nodejitsudb1467487134.redis.irstack.com:f327cfe980c971946e80b8e975fbebb4'
 
