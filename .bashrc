@@ -1,7 +1,7 @@
 export PS1="\w> "
 
-alias ui01='ssh mcotton@192.168.2.158'
-alias ui02='ssh mcotton@192.168.2.159'
+alias ui01='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.158'
+alias ui02='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.j159'
 #alias fuze='sshfs mcotton@192.168.2.158:/home/mcotton ~/een'
 alias fuze='sshfs -p 22 mcotton@192.168.2.169:/home/mcotton/ /Users/cotton/een -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=RemoteHome'
 
@@ -117,7 +117,7 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
-alias sandbox='ssh mcotton@192.168.2.169'
+alias sandbox='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.169'
 alias pull_login="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/login/mcotton-een/templates/; git pull; grunt ' "
 alias pull_next="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/next/mcotton-een/templates/; git pull; grunt ' "
 alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-een/templates/; git pull; grunt ' "
