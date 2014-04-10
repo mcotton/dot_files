@@ -1,7 +1,7 @@
 export PS1="\w> "
 
 alias ui01='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.158'
-alias ui02='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.j159'
+alias ui02='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.159'
 #alias fuze='sshfs mcotton@192.168.2.158:/home/mcotton ~/een'
 alias fuze='sshfs -p 22 mcotton@192.168.2.169:/home/mcotton/ /Users/cotton/een -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=RemoteHome'
 
