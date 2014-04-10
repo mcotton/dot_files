@@ -117,6 +117,7 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
+alias wyn='ssh -i ~/.ssh/mcotton_eagleeye root@10.53.14.11'
 alias sandbox='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.169'
 alias pull_login="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/login/mcotton-een/templates/; git pull; grunt ' "
 alias pull_next="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/next/mcotton-een/templates/; git pull; grunt ' "
