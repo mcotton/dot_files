@@ -83,6 +83,7 @@ alias bump="git checkout master; git merge mcotton; git pull --all; git push; gi
 alias patches="git log --abbrev-commit -p"
 alias gti='git'
 alias checkout='git checkout'
+alias gdiff='git diff --ignore-space-change'
 
 alias record='i=1;while [ 1 ];do screencapture -t jpg -x /Volumes/Mr.Tiny/$i.jpg; let i++;sleep 6; done'
 
