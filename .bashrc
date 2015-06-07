@@ -44,8 +44,8 @@ alias cls='clear; ls'
 
 alias e='exit'
 
-
 export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 
 # Setting PATH for MacPython 2.5
@@ -131,3 +131,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+alias camlan='ssh  -o UserKnownHostsFile=/dev/null eagle@10.143.0.1'
