@@ -134,3 +134,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 
 alias camlan='ssh  -o UserKnownHostsFile=/dev/null eagle@10.143.0.1'
+alias camtelnet='scp -o UserKnownHostsFile=/dev/null telnet-0.17-48.el6.x86_64.rpm root@10.143.0.1:/tmp'
+
+alias start-nginx='sudo launchctl load /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+alias stop-nginx='sudo launchctl unload /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
