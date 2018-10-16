@@ -1,8 +1,6 @@
 syntax enable
 syntax on
 set background=light
-let g:solarized_termcolors=256
-colorscheme solarized
 
 set nowrap
 set autoindent

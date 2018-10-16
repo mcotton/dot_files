@@ -109,14 +109,6 @@ function parse_git_branch {
 #export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$NO_COLOUR\$ "
 
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
 
 alias wyn='ssh -i ~/.ssh/mcotton_eagleeye root@10.53.14.11'
 alias sandbox='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.169'
