@@ -128,10 +128,10 @@ export PYTHONPATH=/Applications/Developer/GoogleAppEngineLauncher.app/Contents/R
 
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/cotton/dev/google-cloud-sdk/path.bash.inc'
+# source '/Users/cotton/dev/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/cotton/dev/google-cloud-sdk/completion.bash.inc'
+# source '/Users/cotton/dev/google-cloud-sdk/completion.bash.inc'
 
 alias droplet='ssh -i ~/.ssh/digitalocean root@104.131.21.146'
 
