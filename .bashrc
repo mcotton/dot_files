@@ -1,9 +1,6 @@
 export PS1="\w> "
 
-alias ui01='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.158'
-alias ui02='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.159'
-#alias fuze='sshfs mcotton@192.168.2.158:/home/mcotton ~/een'
-alias fuze='sshfs -p 22 mcotton@192.168.2.169:/home/mcotton/ /Users/cotton/een -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=RemoteHome'
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/huvrdata-14060ecc3215.json
 
 alias hardware='/Users/cotton/dev/CS/tecs-software-suite-2.5/HardwareSimulator.sh'
 
@@ -17,15 +14,9 @@ alias paste='pbpaste'
 alias mate='open -a TextMate'
 alias coda='open -a /Applications/Developer/Coda.app/'
 
-alias aws='ssh -i ~/.ssh/turbocotton.pem ubuntu@107.22.196.135'
-
-#alias ec2='ssh -i ~/ec2/subtlecontrols/cotton.pem ubuntu@50.16.222.245'
-#alias slicehost='ssh -p 30000 demo@67.23.0.254'
-
 #alias serial='screen /dev/tty.FireFly-586F-SPP-1 19200'
 #alias roomba='screen /dev/tty.KeySerial1 57600'
 alias ll='ls -alF'
-#alias android_proxy='adb forward tcp:8080 localabstract:Proxy'
 
 alias ..='cd ..'
 
@@ -66,8 +57,6 @@ alias m1='alias g1="cd `pwd`"'
 alias m2='alias g2="cd `pwd`"'
 alias m3='alias g3="cd `pwd`"'
 
-#]alias whack="ssh mcotton@192.168.2.158 'cd /home/mcotton/dev/mcotton-een; git pull origin merge'"
-alias whack='ssh mcotton@192.168.2.158 '\''cd /home/mcotton/dev/mcotton-een; git pull origin mcotton-refactor'\'''
 
 alias gitpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 alias status='git status --short'
@@ -118,12 +107,6 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
-alias wyn='ssh -i ~/.ssh/mcotton_eagleeye root@10.53.14.11'
-alias sandbox='ssh -i ~/.ssh/mcotton_eagleeye mcotton@192.168.2.169'
-alias pull_login="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/login/mcotton-een/templates/; git pull; grunt ' "
-alias pull_next="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/next/mcotton-een/templates/; git pull; grunt ' "
-alias pull_prev="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/prev/mcotton-een/templates/; git pull; grunt ' "
-alias pull_stage="ssh mcotton@192.168.2.169 'cd /home/mcotton/een/stage/mcotton-een/templates/; git pull; git checkout -f;  git reset --hard' "
 alias sublime='open -a /Applications/Developer/Sublime\ Text.app/'
 
 alias redis-remote='redis-cli -h nodejitsudb1467487134.redis.irstack.com -p 6379 -a nodejitsudb1467487134.redis.irstack.com:f327cfe980c971946e80b8e975fbebb4'
@@ -133,8 +116,33 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-alias camlan='ssh  -o UserKnownHostsFile=/dev/null eagle@10.143.0.1'
-alias camtelnet='scp -o UserKnownHostsFile=/dev/null telnet-0.17-48.el6.x86_64.rpm root@10.143.0.1:/tmp'
-
 alias start-nginx='sudo launchctl load /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias stop-nginx='sudo launchctl unload /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+
+alias pdf-compress="phantomjs ~/dev/app-pdf/html2pdf.js && gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUITE -dBATCH -sOutputFile=output2.pdf output.pdf "
+alias remote_shell="remote_api_shell.py -s huvrdata.appspot.com"
+alias local_shell="remote_api_shell.py -s localhost:59944"
+
+alias huvrdata_shell="export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/huvrdata-14060ecc3215.json; remote_api_shell.py -s huvrdata.appspot.com"
+alias inspectflow_shell="export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/inspectflow-5f247ff2bb04.json; remote_api_shell.py -s inspectflow.appspot.com"
+alias inspectflow-stage_shell="export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/Inspectflow-stage-bfff645de7db.json; remote_api_shell.py -s inspectflow-stage.appspot.com"
+alias huvrtools_shell='export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/huvrtools-14fcd6d0913c.json; remote_api_shell.py -s huvrtools.appspot.com'
+alias huvrbp_shell='export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/huvrbp-6485ec4a5b6a.json; remote_api_shell.py -s huvrbp.appspot.com'
+alias huvrdatacloud_shell="export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/dev/huvr/huvrdatacloud-e4c36245f278.json; remote_api_shell.py -s huvrdatacloud.appspot.com"
+
+
+export PYTHONPATH=/usr/local/Cellar/opencv/2.4.12_2/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=/Applications/Developer/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/:$PYTHONPATH
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/cotton/dev/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/cotton/dev/google-cloud-sdk/completion.bash.inc'
+
+alias droplet='ssh -i ~/.ssh/digitalocean root@104.131.21.146'
+
+alias update_prod='grunt prod;appcfg.py update .'
+
+export PATH=$PATH:/usr/local/m-cli
