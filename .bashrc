@@ -98,14 +98,6 @@ function parse_git_branch {
 #export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$NO_COLOUR\$ "
 
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
 
 alias sublime='open -a /Applications/Developer/Sublime\ Text.app/'
 
