@@ -12,7 +12,6 @@ alias copy='pbcopy'
 alias paste='pbpaste'
 
 alias mate='open -a TextMate'
-alias coda='open -a /Applications/Developer/Coda.app/'
 
 #alias serial='screen /dev/tty.FireFly-586F-SPP-1 19200'
 #alias roomba='screen /dev/tty.KeySerial1 57600'
@@ -78,9 +77,9 @@ alias record='i=1;while [ 1 ];do screencapture -t jpg -x /Volumes/Mr.Tiny/$i.jpg
 
 alias new='ls -ltr | tail'
 
-#function parse_git_branch () {
-#       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-#}
+function parse_git_branch () {
+       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
@@ -99,7 +98,7 @@ function parse_git_branch {
 PS1="$GREEN\w$YELLOW \$(parse_git_branch)$NO_COLOUR\$ "
 
 
-alias sublime='open -a /Applications/Developer/Sublime\ Text.app/'
+alias sublime='open -a /Applications/Sublime\ Text.app/'
 
 alias redis-remote='redis-cli -h nodejitsudb1467487134.redis.irstack.com -p 6379 -a nodejitsudb1467487134.redis.irstack.com:f327cfe980c971946e80b8e975fbebb4'
 
@@ -124,7 +123,7 @@ alias huvrdatacloud_shell="export GOOGLE_APPLICATION_CREDENTIALS=/Users/cotton/d
 
 
 export PYTHONPATH=/usr/local/Cellar/opencv/2.4.12_2/lib/python2.7/site-packages:$PYTHONPATH
-export PYTHONPATH=/Applications/Developer/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/:$PYTHONPATH
+export PYTHONPATH=/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/:$PYTHONPATH
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -133,8 +132,12 @@ export PYTHONPATH=/Applications/Developer/GoogleAppEngineLauncher.app/Contents/R
 # The next line enables shell command completion for gcloud.
 # source '/Users/cotton/dev/google-cloud-sdk/completion.bash.inc'
 
-alias droplet='ssh -i ~/.ssh/digitalocean root@104.131.21.146'
+alias droplet='ssh -i ~/.ssh/digitalocean mcotton@een.cloud'
 
 alias update_prod='grunt prod;appcfg.py update .'
 
 export PATH=$PATH:/usr/local/m-cli
+
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+
+alias raspberry="ssh pi@172.30.11.242"
