@@ -141,3 +141,9 @@ export PATH=$PATH:/usr/local/m-cli
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 alias raspberry="ssh pi@172.30.11.242"
+
+
+if [ -f ~/dev/personal/dot_files/.docker_aliases ]; then
+	. ~/dev/personal/dot_files/.docker_aliases
+fi
+
