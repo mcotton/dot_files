@@ -1,0 +1,16 @@
+alias wifi='ifconfig en0'
+
+alias copy='pbcopy'
+alias paste='pbpaste'
+
+alias sublime='open -a /Applications/Sublime\ Text.app/'
+
+
+alias start-nginx='sudo launchctl load /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+alias stop-nginx='sudo launchctl unload /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+
+alias backup_to_iCloud='rsync -va /Users/cotton/dev/ "/Users/cotton/Library/Mobile Documents/com~apple~CloudDocs/dev/"'
+
+alias kerbal='/Applications/KSP_osx/KSP.app/Contents/MacOS/KSP --force-gfx-metal'

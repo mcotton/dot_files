@@ -1,0 +1,6 @@
+
+alias raspberry="ssh pi@172.30.3.118"
+
+alias droplet='ssh -i ~/.ssh/digitalocean mcotton@een.cloud'
+alias droplet2='ssh -i ~/.ssh/digitalocean mcotton@demo.een.cloud'
+

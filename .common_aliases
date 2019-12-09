@@ -1,0 +1,25 @@
+
+
+alias ll='ls -alF'
+
+alias ..='cd ..'
+
+# Shell -- Some are from Damian Conway
+alias l="ls -lh"
+alias s="cd .."
+alias a="ls -la"
+alias cdd='cd -'        # goto last dir cd'ed from
+
+alias h='history'
+alias c='clear'
+alias cl='clear; l'
+alias cls='clear; ls'
+
+alias e='exit'
+
+
+alias webserver='python -m SimpleHTTPServer 8000'
+
+
+alias vi='vim'
+

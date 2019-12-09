@@ -44,7 +44,11 @@ dke() {
 }
 
 dken() {
-  docker exec -it `docker ps | grep $1 | awk '{print $1}'` /bin/sh
+  docker exec -it `docker ps | grep $1 | awk '{print $1}'` /bin/bash
+}
+
+dkipython() {
+  docker exec -it `docker ps | grep $1 | awk '{print $1}'` ipython
 }
 
 dkexe() {
@@ -78,3 +82,4 @@ dkredis() {
   redisLabel=`docker ps | grep redis | awk '{print $NF}'`
   docker exec -it $redisLabel redis-cli
 }
+
