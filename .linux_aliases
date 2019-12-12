@@ -1,3 +1,9 @@
+alias disableGUI='sudo systemctl set-default multi-user.target'
+alias enableGUI='sudo systemctl set-default graphical.target'
+alias startGUI='sudo systemctl start gdm3.service'
+alias stopGUI='sudo systemctl stop gdm3.service'
+
+/usr/bin/setxkbmap -option "caps:escape"
 
 alias open='xdg-open'
 
