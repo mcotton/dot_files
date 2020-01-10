@@ -1,8 +1,8 @@
 
-if [ -f ~/dev/personal/dot_files/.linuxc_aliases ]; then
-    . ~/dev/personal/dot_files/.linuxc_aliases
-fi
-
-#if [ -f ~/dev/personal/dot_files/.mac_aliases ]; then
-#    . ~/dev/personal/dot_files/.mac_aliases
+#if [ -f ~/dev/personal/dot_files/.linuxc_aliases ]; then
+#    . ~/dev/personal/dot_files/.linuxc_aliases
 #fi
+
+if [ -f ~/dev/personal/dot_files/.mac_aliases ]; then
+    . ~/dev/personal/dot_files/.mac_aliases
+fi
