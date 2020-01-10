@@ -6,3 +6,5 @@
 if [ -f ~/dev/personal/dot_files/.mac_aliases ]; then
     . ~/dev/personal/dot_files/.mac_aliases
 fi
+
+alias work_box='ssh mcotton@pop-os.local'
