@@ -14,3 +14,5 @@ alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 alias backup_to_iCloud='rsync -va /Users/cotton/dev/ "/Users/cotton/Library/Mobile Documents/com~apple~CloudDocs/dev/"'
 
 alias kerbal='/Applications/KSP_osx/KSP.app/Contents/MacOS/KSP --force-gfx-metal'
+
+alias update_repos='/Users/cotton/dev/personal/dot_files/update_repos.sh'
