@@ -4,8 +4,6 @@ alias raspberry="ssh pi@172.30.3.118"
 alias droplet='ssh -i ~/.ssh/digitalocean mcotton@een.cloud'
 alias droplet2='ssh -i ~/.ssh/digitalocean mcotton@demo.een.cloud'
 
-alias space_station='ssh mcotton@192.168.1.176'
-
-alias sync_hertz='rsync -avz -e "ssh -i ~/.ssh/digitalocean -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress mcotton@hertz.een.cloud:/home/mcotton/EE-hertz/tmp/* tmp/'
+alias space_station='ssh mcotton@192.168.1.199'
 
 

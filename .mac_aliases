@@ -16,3 +16,5 @@ alias backup_to_iCloud='rsync -va /Users/cotton/dev/ "/Users/cotton/Library/Mobi
 alias kerbal='/Applications/KSP_osx/KSP.app/Contents/MacOS/KSP --force-gfx-metal'
 
 alias update_repos='/Users/cotton/dev/personal/dot_files/update_repos.sh'
+
+alias time_machine_boost='sudo sysctl debug.lowpri_throttle_enabled=0'
