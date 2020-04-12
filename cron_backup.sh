@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -a --exclude /home/mcotton/Storage --exclude /home/mcotton/Storage/* --progress --stats --human-readable /home/mcotton /media/mcotton/Storage/backup/
+rsync -a --exclude Storage --exclude Storage/* --exclude .cache --exclude .config  --exclude .dbus --progress --stats --human-readable /home/mcotton /mnt/Storage/backup/
