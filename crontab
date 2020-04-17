@@ -1,0 +1,17 @@
+# run these every hour
+00 * * * * /home/mcotton/dev/personal/dot_files/cron_dev_backup.sh
+15 * * * * /home/mcotton/dev/personal/dot_files/cron_hertz.sh
+45 * * * * /home/mcotton/dev/personal/dot_files/cron_hertz.sh
+
+# run these at 10am
+30 10 * * * /home/mcotton/dev/personal/dot_files/cron_full_backup.sh
+
+# run these at 4pm
+30 16 * * * /home/mcotton/dev/personal/dot_files/cron_full_backup.sh
+
+# run these at 10pm
+30 22 * * * /home/mcotton/dev/personal/dot_files/cron_full_backup.sh
+
+# run this every reboot (delayed 10 minutes)
+@reboot sleep 600 && /home/mcotton/dev/personal/dot_files/cron_dev_backup.sh
+
