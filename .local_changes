@@ -20,4 +20,9 @@ alias work_box='ssh mcotton@172.30.7.71'
 
 alias update_repos='/home/mcotton/dev/personal/dot_files/update_repos.sh'
 
+# only show me the drives I care about in human form
+alias freespace='df -h -x devtmpfs -x tmpfs /dev/md0 /dev/nvme0n1p1'
 
+alias gpustat='watch -n2 nvidia-smi'
+
+alias watch_images='watch -n 1 "tree -L 3 --filelimit=10 ~/dev/training/template/images"'

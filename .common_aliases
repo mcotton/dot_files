@@ -23,3 +23,9 @@ alias webserver='python -m SimpleHTTPServer 8000'
 
 alias vi='vim'
 
+alias t1='tree --filelimit=10'
+alias t2='tree -L 2 --filelimit=10'
+alias t3='tree -L 3 --filelimit=10'
+alias t4='tree -L 4 --filelimit=10'
+alias t5='tree -L 6 --filelimit=10'
+
