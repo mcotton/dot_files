@@ -7,4 +7,4 @@ alias stopGUI='sudo systemctl stop gdm3.service'
 
 alias open='xdg-open'
 
-alias diskstat='watch -n1 iostat --human 1 1 /dev/md0 /dev/nvme0n1 /dev/sda /dev/sdb'
+alias diskstat='watch -n1 iostat --human 1 1 /dev/nvme0n1 /dev/sda1 /dev/sdb1'
