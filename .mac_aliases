@@ -5,16 +5,20 @@ alias paste='pbpaste'
 
 alias sublime='open -a /Applications/Sublime\ Text.app/'
 
-
 alias start-nginx='sudo launchctl load /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias stop-nginx='sudo launchctl unload /Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
-alias backup_to_iCloud='rsync -va /Users/cotton/dev/ "/Users/cotton/Library/Mobile Documents/com~apple~CloudDocs/dev/"'
+alias backup_to_iCloud='rsync -va --progress --stats --human-readable /Users/cotton/dev/ "/Users/cotton/Library/Mobile Documents/com~apple~CloudDocs/dev/"'
 
 alias kerbal='/Applications/KSP_osx/KSP.app/Contents/MacOS/KSP --force-gfx-metal'
 
-alias update_repos='/Users/cotton/dev/personal/dot_files/update_repos.sh'
+alias update_repos='/Users/mcotton/dev/personal/dot_files/update_repos.sh'
 
 alias time_machine_boost='sudo sysctl debug.lowpri_throttle_enabled=0'
+
+alias sync_photos='rsync -av --stats --progress ~/Pictures/Photos\ Library.photoslibrary /Volumes/home/pictures/Apple\ Photos/'
+
+alias watch_Maxine="vlc rtsp://admin:bc04uhPb7JRuowqlFTqi@192.168.1.186:554/cam/realmonitor?channel=1\&subtype=1 & > /dev/null"
+

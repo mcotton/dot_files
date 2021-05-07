@@ -1,6 +1,6 @@
 
 
-alias ll='ls -alF'
+alias ll='ls -halF'
 
 alias ..='cd ..'
 
@@ -18,8 +18,7 @@ alias cls='clear; ls'
 alias e='exit'
 
 
-alias webserver='python -m SimpleHTTPServer 8000'
-
+alias webserver='python3 -m http.server'
 
 alias vi='vim'
 
