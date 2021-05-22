@@ -20,4 +20,5 @@ alias backup='rsync -a --exclude /home/mcotton/Storage --exclude /home/mcotton/S
 
 alias update_repos='/home/mcotton/dev/personal/dot_files/update_repos.sh'
 
+alias screen_backup='rsync -avz ~/Documents/screenshots/ /Volumes/homes/mcotton/documents/screenshots/ && rsync -avz ~/Documents/screenrecordings/ /Volumes/homes/mcotton/documents/screenrecordings/'
 
